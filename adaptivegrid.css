@@ -76,7 +76,7 @@
 }
  
 /* Small smartphones in landscape (iPhone in landscape) */
-@media all and (min-width: 480px) and (max-width: 600px){ /* Smaller */
+@media all and (min-width: 481px) and (max-width: 600px){ /* Smaller */
 
     /**
     * Adaptive Framework
@@ -102,7 +102,7 @@
 }
  
 /* Small tablets and large phones in landscape (Nexus 7) */
-@media all and (min-width: 600px) and (max-width: 767px) { /* Small */
+@media all and (min-width: 601px) and (max-width: 767px) { /* Small */
 
     /**
     * Adaptive Framework
