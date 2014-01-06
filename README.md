@@ -1,7 +1,7 @@
 AdaptiveGrid
 ============
 
-AdaptiveGrid is a fluid CSS grid framework which adapts to the screen size. For example, if you needed a column of 50% to become full width on mobile you'd add the class smallest_to_100 to it.
+AdaptiveGrid is a fluid CSS grid framework which adapts to the screen size. For example, if you needed a column of 50% to become full width on mobile you'd add the class smallest_to_100 to it. It's very similar to Twitter's Bootstrap but roughly 5% of the filesize.
 
 Example
 =======
