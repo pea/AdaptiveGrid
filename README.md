@@ -51,25 +51,33 @@ Adaptive Grid
 
 These set of classes allow you to easily control the behaviour of columns depending on the screen size without having to mess with the media queiries themselves.
 
-| Class Name | Screen Size |
-| ---------- | ----------- |
-| Smallest   | lala |
+| Name       | Screen Size      | Example Class
+| ---------- | ---------------- | -------------
+| smallest   | 0px to 480px     | .smallest_to_100
+| smaller    | 481px to 600px   | .smaller_to_100
+| small      | 601px to 767px   | .small_to_80
+| medium     | 768px to 1023px  | .medium_to_50
+| large      | 1024 to 1199px   | .large_to_33
+| larger     | 1200px and more  | .larger_to_20
+
+Example: Both columns 100% on iPhone-sized screens
 
 ```css
 
 <div class="grid gut10">
-	<div class="col perc50 smallest_to_100">
-		<div class="inner"></div>
-	</div>
-	<div class="col perc50 smallest_to_100">
-		<div class="inner"></div>
-	</div>
-	<div class="col perc50 smallest_to_100">
-		<div class="inner"></div>
-	</div>
-	<div class="col perc50 smallest_to_100">
-		<div class="inner"></div>
-	</div>
+	<div class="col perc50 smallest_to_100"></div>
+	<div class="col perc50 smallest_to_100"></div>
+</div>
+	
+```
+
+Example: First and second column 50% on iPad-sized screens
+
+```css
+
+<div class="grid gut10">
+	<div class="col perc30 medium_to_50"></div>
+	<div class="col perc70 medium_to_50"></div>
 </div>
 	
 ```
