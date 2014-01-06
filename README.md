@@ -54,11 +54,11 @@ These set of classes allow you to easily control the behaviour of columns depend
 | Name       | Screen Size      | Example Class
 | ---------- | ---------------- | -------------
 | smallest   | 0px to 480px     | .**smallest**\_to\_100
-| smaller    | 481px to 600px   | .**smaller**_to_100
-| small      | 601px to 767px   | .**small**_to_80
-| medium     | 768px to 1023px  | .**medium**_to_50
-| large      | 1024 to 1199px   | .**large**_to_33
-| larger     | 1200px and more  | .**larger**_to_20
+| smaller    | 481px to 600px   | .**smaller**\_to\_100
+| small      | 601px to 767px   | .**small**\_to\_80
+| medium     | 768px to 1023px  | .**medium**\_to\_50
+| large      | 1024 to 1199px   | .**large**\_to\_33
+| larger     | 1200px and more  | .**larger**\_to\_20
 
 **Example:** Both columns 100% on iPhone-sized screens
 
