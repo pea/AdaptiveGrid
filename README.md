@@ -3,6 +3,28 @@ AdaptiveGrid
 
 AdaptiveGrid is a fluid CSS grid framework which adapts to the screen size. For example, if you needed a column of 50% to become full width on mobile you'd add the class smallest_to_100 to it.
 
+Example
+=======
+
+```css
+
+<div class="grid gut10">
+	<div class="col perc20 smallest_to_100 smaller_to_50 small_to_50 medium_to_50">
+		<h1>Column 1</h1>
+	</div>
+	<div class="col perc80 smallest_to_100 smaller_to_50 small_to_50 medium_to_50">
+		<h1>Column 2</h1>
+	</div>
+	<div class="col perc50 smallest_to_100">
+		<h1>Column 3</h1>
+	</div>
+	<div class="col perc50 smallest_to_100">
+		<h1>Column 4</h1>
+	</div>
+</div>
+
+```
+
 Options
 =======
 
