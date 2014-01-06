@@ -53,7 +53,7 @@ These set of classes allow you to easily control the behaviour of columns depend
 
 | Name       | Screen Size      | Example Class
 | ---------- | ---------------- | -------------
-| smallest   | 0px to 480px     | .**smallest**`_to`_100
+| smallest   | 0px to 480px     | `.**smallest**_to_100`
 | smaller    | 481px to 600px   | .**smaller**_to_100
 | small      | 601px to 767px   | .**small**_to_80
 | medium     | 768px to 1023px  | .**medium**_to_50
