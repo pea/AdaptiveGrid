@@ -12,7 +12,7 @@ The number of pixels between the columns.
 
 Either: gut10, gut20 or gut30
 
-Example:
+**Example:**
 
 For a gutter of 10px.
 
@@ -32,7 +32,7 @@ The column widths of AdaptiveGrid are in percentages, opposed to set sizes, whic
 
 Options: .perc100, .perc80, .perc70, .perc66, .perc50, .perc40, .perc33, .perc30, .perc25, .perc20, .perc16
 
-Example:
+**Example:**
 
 For two columns of 50% and a full width column below them.
 
@@ -53,14 +53,14 @@ These set of classes allow you to easily control the behaviour of columns depend
 
 | Name       | Screen Size      | Example Class
 | ---------- | ---------------- | -------------
-| smallest   | 0px to 480px     | .smallest_to_100
-| smaller    | 481px to 600px   | .smaller_to_100
-| small      | 601px to 767px   | .small_to_80
-| medium     | 768px to 1023px  | .medium_to_50
-| large      | 1024 to 1199px   | .large_to_33
-| larger     | 1200px and more  | .larger_to_20
+| smallest   | 0px to 480px     | .**smallest**_to_100
+| smaller    | 481px to 600px   | .**smaller**_to_100
+| small      | 601px to 767px   | .**small**_to_80
+| medium     | 768px to 1023px  | .**medium**_to_50
+| large      | 1024 to 1199px   | .**large**_to_33
+| larger     | 1200px and more  | .**larger**_to_20
 
-Example: Both columns 100% on iPhone-sized screens
+**Example:** Both columns 100% on iPhone-sized screens
 
 ```css
 
@@ -71,7 +71,7 @@ Example: Both columns 100% on iPhone-sized screens
 	
 ```
 
-Example: First and second column 50% on iPad-sized screens
+**Example:** First and second column 50% on iPad-sized screens
 
 ```css
 
