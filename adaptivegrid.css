@@ -1,6 +1,7 @@
 /**
 * AdaptiveGrid
-* AdaptiveGrid is a fluid CSS grid framework which adapts to the screen size. Yoyoyo
+* AdaptiveGrid is a fluid CSS grid framework which adapts to the screen size.
+* https://github.com/pea/AdaptiveGrid
 */
 
 
@@ -14,6 +15,9 @@
 .grid {
     overflow: hidden;  
     clear: both;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .col {
@@ -27,6 +31,7 @@
 .grid .col.perc80 { width: 80% }
 .grid .col.perc70 { width: 70% }
 .grid .col.perc66 { width: 66.6666666666% }
+.grid .col.perc60 { width: 60% }
 .grid .col.perc50 { width: 50% }
 .grid .col.perc40 { width: 40% }
 .grid .col.perc33 { width: 33.3333333333% }
@@ -36,13 +41,13 @@
 .grid .col.perc16 { width: 16.66666666666667% }
 
 /* Gutter */
-.grid.gut30 { padding: 15px; }
 .grid.gut30 .col { padding: 15px }
-.grid.gut20 { padding: 10px; }
 .grid.gut20 .col { padding: 10px }
-.grid.gut10 { padding: 5px; }
 .grid.gut10 .col { padding: 5px }
 
+.grid.gut30 { margin: -5px }
+.grid.gut20 { margin: -5px }
+.grid.gut10 { margin: -5px }
 
 /**
 * Responses 
@@ -64,6 +69,7 @@
     .grid .col.smallest_to_80 { width: 80% }
     .grid .col.smallest_to_70 { width: 70% }
     .grid .col.smallest_to_66 { width: 66.6666666666% }
+    .grid .col.smallest_to_60 { width: 60% }
     .grid .col.smallest_to_50 { width: 50% }
     .grid .col.smallest_to_40 { width: 40% }
     .grid .col.smallest_to_33 { width: 33.3333333333% }
@@ -89,6 +95,7 @@
     .grid .col.smaller_to_80 { width: 80% }
     .grid .col.smaller_to_70 { width: 70% }
     .grid .col.smaller_to_66 { width: 66.6666666666% }
+    .grid .col.smaller_to_60 { width: 60% }
     .grid .col.smaller_to_50 { width: 50% }
     .grid .col.smaller_to_40 { width: 40% }
     .grid .col.smaller_to_33 { width: 33.3333333333% }
@@ -115,6 +122,7 @@
     .grid .col.small_to_80 { width: 80% }
     .grid .col.small_to_70 { width: 70% }
     .grid .col.small_to_66 { width: 66.6666666666% }
+    .grid .col.small_to_60 { width: 60% }
     .grid .col.small_to_50 { width: 50% }
     .grid .col.small_to_40 { width: 40% }
     .grid .col.small_to_33 { width: 33.3333333333% }
@@ -141,6 +149,7 @@
     .grid .col.medium_to_80 { width: 80% }
     .grid .col.medium_to_70 { width: 70% }
     .grid .col.medium_to_66 { width: 66.6666666666% }
+    .grid .col.medium_to_60 { width: 60% }
     .grid .col.medium_to_50 { width: 50% }
     .grid .col.medium_to_40 { width: 40% }
     .grid .col.medium_to_33 { width: 33.3333333333% }
@@ -166,6 +175,7 @@
     .grid .col.large_to_80 { width: 80% }
     .grid .col.large_to_70 { width: 70% }
     .grid .col.large_to_66 { width: 66.6666666666% }
+    .grid .col.large_to_60 { width: 60% }
     .grid .col.large_to_50 { width: 50% }
     .grid .col.large_to_40 { width: 40% }
     .grid .col.large_to_33 { width: 33.3333333333% }
@@ -191,6 +201,7 @@
     .grid .col.larger_to_80 { width: 80% }
     .grid .col.larger_to_70 { width: 70% }
     .grid .col.larger_to_66 { width: 66.6666666666% }
+    .grid .col.larger_to_60 { width: 60% }
     .grid .col.larger_to_50 { width: 50% }
     .grid .col.larger_to_40 { width: 40% }
     .grid .col.larger_to_33 { width: 33.3333333333% }
