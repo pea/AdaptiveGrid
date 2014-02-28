@@ -45,8 +45,8 @@
 .grid.gut20 .col { padding: 10px }
 .grid.gut10 .col { padding: 5px }
 
-.grid.gut30 { margin: -5px }
-.grid.gut20 { margin: -5px }
+.grid.gut30 { margin: -15px }
+.grid.gut20 { margin: -10px }
 .grid.gut10 { margin: -5px }
 
 /**
