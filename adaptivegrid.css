@@ -49,6 +49,11 @@
 .grid.gut20 { margin: -10px }
 .grid.gut10 { margin: -5px }
 
+.grid.gut30.outergut { margin: 0; padding: 15px }
+.grid.gut20.outergut { margin: 0; padding: 10px }
+.grid.gut10.outergut { margin: 0; padding: 5px }
+.grid.gut5.outergut { margin: 0; padding: 2.5px }
+
 /**
 * Responses 
 */
