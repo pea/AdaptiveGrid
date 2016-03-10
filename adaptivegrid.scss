@@ -12,7 +12,12 @@
     box-sizing: border-box;
 }
 
+/* List of custom column sizes in percentages */
+
 $column_sizes: 10 16.66666666666667 20 25 30 33.3333333333 40 45 50 55 60 66.6666666666 70 80 100;
+
+/* List of custom gutter sizes in pixels */
+
 $gutter_sizes: 5 10 15 20 30 40 50;
 
 .grid {
