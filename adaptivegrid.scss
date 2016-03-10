@@ -4,55 +4,60 @@
 * https://github.com/pea/AdaptiveGrid
 */
 
-
-
-
-/**
-* The Grid
-*/
-
-
-.grid {
-    overflow: hidden;  
-    clear: both;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
+/* Column Defaults */
 
 .col {
-    float: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-.grid .col.perc100 { width: 100% }
-.grid .col.perc80 { width: 80% }
-.grid .col.perc70 { width: 70% }
-.grid .col.perc66 { width: 66.6666666666% }
-.grid .col.perc60 { width: 60% }
-.grid .col.perc50 { width: 50% }
-.grid .col.perc40 { width: 40% }
-.grid .col.perc33 { width: 33.3333333333% }
-.grid .col.perc30 { width: 30% }
-.grid .col.perc25 { width: 25% }
-.grid .col.perc20 { width: 20% }
-.grid .col.perc16 { width: 16.66666666666667% }
+$column_sizes: 10 16.66666666666667 20 25 30 33.3333333333 40 45 50 55 60 66.6666666666 70 80 100;
+$gutter_sizes: 5 10 15 20 30 40 50;
 
-/* Gutter */
-.grid.gut30 .col { padding: 15px }
-.grid.gut20 .col { padding: 10px }
-.grid.gut10 .col { padding: 5px }
+.grid {
+    
+    /* The Grid */
+    
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    
+    /* Column Sizes */
+    
+    .col {
+        @each $size in $column_sizes {
+            &.perc#{floor($size)} {
+                width: #{$size}#{"%"};
+            } 
+        }
+    }
+    
+    /* Gutter */
+    
+    @each $size in $gutter_sizes {
+        .gut#{floor($size)} {
+            margin: #{"-"}#{$size/2}#{"px"};
+        }
+    }
+    
+    @each $size in $gutter_sizes {
+        .gut#{floor($size)} .col {
+            padding: #{$size/2}#{"px"};
+        }
+    }
+    
+    /* Outer Gutter */
+    
+    @each $size in $gutter_sizes {
+        .gut#{floor($size)}.outergut {
+            margin: 0; padding: #{$size/2}#{"px"};
+        }
+    }
 
-.grid.gut30 { margin: -15px }
-.grid.gut20 { margin: -10px }
-.grid.gut10 { margin: -5px }
-
-.grid.gut30.outergut { margin: 0; padding: 15px }
-.grid.gut20.outergut { margin: 0; padding: 10px }
-.grid.gut10.outergut { margin: 0; padding: 5px }
-.grid.gut5.outergut { margin: 0; padding: 2.5px }
+}
 
 /**
 * Responses 
@@ -71,18 +76,13 @@
     
     /* Grid */
     .grid {
-    	.col.smallest_to_100 { width: 100% }
-	    .col.smallest_to_80 { width: 80% }
-	    .col.smallest_to_70 { width: 70% }
-	    .col.smallest_to_66 { width: 66.6666666666% }
-	    .col.smallest_to_60 { width: 60% }
-	    .col.smallest_to_50 { width: 50% }
-	    .col.smallest_to_40 { width: 40% }
-	    .col.smallest_to_33 { width: 33.3333333333% }
-	    .col.smallest_to_30 { width: 30% }
-	    .col.smallest_to_25 { width: 25% }
-	    .col.smallest_to_20 { width: 20% }
-	    .col.smallest_to_16 { width: 16.66666666666667% }
+    	.col {
+            @each $size in $column_sizes {
+                &.smallest_to_#{floor($size)} {
+                    width: #{$size}#{"%"};
+                } 
+            }
+	    }
     }
   
 }
@@ -99,18 +99,13 @@
 
     /* Grid */
     .grid {
-	    .col.smaller_to_100 { width: 100% }
-	    .col.smaller_to_80 { width: 80% }
-	    .col.smaller_to_70 { width: 70% }
-	    .col.smaller_to_66 { width: 66.6666666666% }
-	    .col.smaller_to_60 { width: 60% }
-	    .col.smaller_to_50 { width: 50% }
-	    .col.smaller_to_40 { width: 40% }
-	    .col.smaller_to_33 { width: 33.3333333333% }
-	    .col.smaller_to_30 { width: 30% }
-	    .col.smaller_to_25 { width: 25% }
-	    .col.smaller_to_20 { width: 20% }
-	    .col.smaller_to_16 { width: 16.66666666666667% }
+	    .col {
+            @each $size in $column_sizes {
+                &.smaller_to_#{floor($size)} {
+                    width: #{$size}#{"%"};
+                } 
+            }
+	    }
     }
     
 }
@@ -127,18 +122,13 @@
 
     /* Grid */
     .grid {
-	    .col.small_to_100 { width: 100% }
-	    .col.small_to_80 { width: 80% }
-	    .col.small_to_70 { width: 70% }
-	    .col.small_to_66 { width: 66.6666666666% }
-	    .col.small_to_60 { width: 60% }
-	    .col.small_to_50 { width: 50% }
-	    .col.small_to_40 { width: 40% }
-	    .col.small_to_33 { width: 33.3333333333% }
-	    .col.small_to_30 { width: 30% }
-	    .col.small_to_25 { width: 25% }
-	    .col.small_to_20 { width: 20% }
-	    .col.small_to_16 { width: 16.66666666666667% }
+	    .col {
+            @each $size in $column_sizes {
+                &.small_to_#{floor($size)} {
+                    width: #{$size}#{"%"};
+                } 
+            }
+	    }
 	}
     
 }
@@ -155,18 +145,13 @@
     
     /* Grid */
     .grid {
-	    .col.medium_to_100 { width: 100% }
-	    .col.medium_to_80 { width: 80% }
-	    .col.medium_to_70 { width: 70% }
-	    .col.medium_to_66 { width: 66.6666666666% }
-	    .col.medium_to_60 { width: 60% }
-	    .col.medium_to_50 { width: 50% }
-	    .col.medium_to_40 { width: 40% }
-	    .col.medium_to_33 { width: 33.3333333333% }
-	    .col.medium_to_30 { width: 30% }
-	    .col.medium_to_25 { width: 25% }
-	    .col.medium_to_20 { width: 20% }
-	    .col.medium_to_16 { width: 16.66666666666667% }
+	    .col {
+            @each $size in $column_sizes {
+                &.medium_to_#{floor($size)} {
+                    width: #{$size}#{"%"};
+                } 
+            }
+	    }
     }
  
 }
@@ -183,18 +168,13 @@
 
     /* Grid */
     .grid {
-	    .col.large_to_100 { width: 100% }
-	    .col.large_to_80 { width: 80% }
-	    .col.large_to_70 { width: 70% }
-	    .col.large_to_66 { width: 66.6666666666% }
-	    .col.large_to_60 { width: 60% }
-	    .col.large_to_50 { width: 50% }
-	    .col.large_to_40 { width: 40% }
-	    .col.large_to_33 { width: 33.3333333333% }
-	    .col.large_to_30 { width: 30% }
-	    .col.large_to_25 { width: 25% }
-	    .col.large_to_20 { width: 20% }
-	    .col.large_to_16 { width: 16.66666666666667% }
+	    .col {
+            @each $size in $column_sizes {
+                &.large_to_#{floor($size)} {
+                    width: #{$size}#{"%"};
+                } 
+            }
+	    }
     }
     
 }
@@ -211,18 +191,13 @@
 
     /* Grid */
     .grid {
-	    .col.larger_to_100 { width: 100% }
-	    .col.larger_to_80 { width: 80% }
-	    .col.larger_to_70 { width: 70% }
-	    .col.larger_to_66 { width: 66.6666666666% }
-	    .col.larger_to_60 { width: 60% }
-	    .col.larger_to_50 { width: 50% }
-	    .col.larger_to_40 { width: 40% }
-	    .col.larger_to_33 { width: 33.3333333333% }
-	    .col.larger_to_30 { width: 30% }
-	    .col.larger_to_25 { width: 25% }
-	    .col.larger_to_20 { width: 20% }
-	    .col.larger_to_16 { width: 16.66666666666667% }
+	    .col {
+            @each $size in $column_sizes {
+                &.larger_to_#{floor($size)} {
+                    width: #{$size}#{"%"};
+                } 
+            }
+	    }
     }
     
 }
