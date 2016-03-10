@@ -1,7 +1,7 @@
 AdaptiveGrid
 ============
 
-AdaptiveGrid is a fluid CSS grid framework which adapts to the screen size. For example, if you needed a column of 50% to become full width on mobile you'd add the class smallest_to_100 to it. It's very similar to Twitter's Bootstrap but roughly 5% of the filesize.
+AdaptiveGrid is a fluid CSS grid framework which adapts to the screen size. It is customizable, letting you quickly create your own column and gutter sizes.
 
 Example
 =======
@@ -52,7 +52,7 @@ Column Sizes
 
 The column widths of AdaptiveGrid are in percentages, opposed to set sizes, which means any column size is available. A few of the most common ones are available for you to code the majority of designs
 
-Options: .perc100, .perc80, .perc70, .perc66, .perc50, .perc40, .perc33, .perc30, .perc25, .perc20, .perc16
+Options: .perc100, .perc80, .perc70, .perc66, .perc60, .perc55, .perc50, .perc45, .perc40, .perc33, .perc30, .perc25, .perc20, .perc16, .perc10
 
 **Example:**
 
@@ -103,3 +103,14 @@ These set of classes allow you to easily control the behaviour of columns depend
 </div>
 	
 ```
+
+Adding New Column and Gutter Sizes
+=======================
+
+To create a new column size, add to the $column_sizes SCSS variable.
+
+$column_sizes: **5** 10 16.66666666666667 20 25 30 33.3333333333 40 45 50 55 60 66.6666666666 70 80 100;
+
+To add a new gutter size, add to the $gutter_sizes SCSS variable.
+
+$gutter_sizes: 5 10 15 20 **25** 30 40 50;
