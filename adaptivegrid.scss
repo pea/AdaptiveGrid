@@ -20,6 +20,10 @@ $column_sizes: 10 16.66666666666667 20 25 30 33.3333333333 40 45 50 55 60 66.666
 
 $gutter_sizes: 5 10 15 20 30 40 50;
 
+/* Delimiter for class names (- or _) */
+
+$delimiter: "-";
+
 .grid {
     
     /* The Grid */
@@ -43,13 +47,13 @@ $gutter_sizes: 5 10 15 20 30 40 50;
     /* Gutter */
     
     @each $size in $gutter_sizes {
-        .gut#{floor($size)} {
+        &.gut#{floor($size)} {
             margin: #{"-"}#{$size/2}#{"px"};
         }
     }
     
     @each $size in $gutter_sizes {
-        .gut#{floor($size)} .col {
+        &.gut#{floor($size)} .col {
             padding: #{$size/2}#{"px"};
         }
     }
@@ -57,7 +61,7 @@ $gutter_sizes: 5 10 15 20 30 40 50;
     /* Outer Gutter */
     
     @each $size in $gutter_sizes {
-        .gut#{floor($size)}.outergut {
+        &.gut#{floor($size)}.outergut {
             margin: 0; padding: #{$size/2}#{"px"};
         }
     }
@@ -77,13 +81,13 @@ $gutter_sizes: 5 10 15 20 30 40 50;
     */
 
     /* Hiding */
-    .smallest_hide { display: none; }
+    .smallest#{$delimiter}hide { display: none; }
     
     /* Grid */
     .grid {
     	.col {
             @each $size in $column_sizes {
-                &.smallest_to_#{floor($size)} {
+                &.smallest#{$delimiter}to#{$delimiter}#{floor($size)} {
                     width: #{$size}#{"%"};
                 } 
             }
@@ -100,13 +104,13 @@ $gutter_sizes: 5 10 15 20 30 40 50;
     */
 
     /* Hiding */
-    .smaller_hide { display: none; }
+    .smaller#{$delimiter}hide { display: none; }
 
     /* Grid */
     .grid {
 	    .col {
             @each $size in $column_sizes {
-                &.smaller_to_#{floor($size)} {
+                &.smaller#{$delimiter}to#{$delimiter}#{floor($size)} {
                     width: #{$size}#{"%"};
                 } 
             }
@@ -123,13 +127,13 @@ $gutter_sizes: 5 10 15 20 30 40 50;
     */
 
     /* Hiding */
-    .small_hide { display: none; }
+    .small#{$delimiter}hide { display: none; }
 
     /* Grid */
     .grid {
 	    .col {
             @each $size in $column_sizes {
-                &.small_to_#{floor($size)} {
+                &.small#{$delimiter}to#{$delimiter}#{floor($size)} {
                     width: #{$size}#{"%"};
                 } 
             }
@@ -146,13 +150,13 @@ $gutter_sizes: 5 10 15 20 30 40 50;
     */
 
     /* Hiding */
-    .medium_hide { display: none; }
+    .medium#{$delimiter}hide { display: none; }
     
     /* Grid */
     .grid {
 	    .col {
             @each $size in $column_sizes {
-                &.medium_to_#{floor($size)} {
+                &.medium#{$delimiter}to#{$delimiter}#{floor($size)} {
                     width: #{$size}#{"%"};
                 } 
             }
@@ -169,13 +173,13 @@ $gutter_sizes: 5 10 15 20 30 40 50;
     */
 
     /* Hiding */
-    .large_hide { display: none; }
+    .large#{$delimiter}hide { display: none; }
 
     /* Grid */
     .grid {
 	    .col {
             @each $size in $column_sizes {
-                &.large_to_#{floor($size)} {
+                &.large#{$delimiter}to#{$delimiter}#{floor($size)} {
                     width: #{$size}#{"%"};
                 } 
             }
@@ -192,13 +196,13 @@ $gutter_sizes: 5 10 15 20 30 40 50;
     */
 
     /* Hiding */
-    .larger_hide { display: none; }
+    .larger#{$delimiter}hide { display: none; }
 
     /* Grid */
     .grid {
 	    .col {
             @each $size in $column_sizes {
-                &.larger_to_#{floor($size)} {
+                &.larger#{$delimiter}to#{$delimiter}#{floor($size)} {
                     width: #{$size}#{"%"};
                 } 
             }
