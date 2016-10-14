@@ -6,7 +6,7 @@ AdaptiveGrid is a fluid CSS grid framework which adapts to the screen size. It i
 Example
 =======
 
-```css
+```html
 
 <div class="grid gut10">
 	<div class="col perc20 smallest_to_100 smaller_to_50 small_to_50 medium_to_50">
@@ -32,13 +32,15 @@ Gutter Size
 ===========
 The number of pixels between the columns.
 
-Either: gut10, gut20 or gut30
+Either: gut5, gut10, gut15, gut20, gut30, gut40, gut50, gut60, gut70, gut100;
+
+Editable via the $gutter-sizes variable.
 
 **Example:**
 
 For a gutter of 10px.
 
-```css
+```html
 
 <div class="grid gut10">
 	<div class="col perc50"></div>
@@ -47,6 +49,8 @@ For a gutter of 10px.
 
 ```
 
+Add 'outergut' to the .grid element to apply this gutter size to perimeter of the grid.
+
 Column Sizes
 ============
 
@@ -54,11 +58,13 @@ The column widths of AdaptiveGrid are in percentages, opposed to set sizes, whic
 
 Options: .perc100, .perc80, .perc70, .perc66, .perc60, .perc55, .perc50, .perc45, .perc40, .perc33, .perc30, .perc25, .perc20, .perc16, .perc10
 
+Editable via the $column-sizes variable;
+
 **Example:**
 
 For two columns of 50% and a full width column below them.
 
-```css
+```html
 
 <div class="grid gut10">
 	<div class="col perc50"></div>
@@ -71,7 +77,7 @@ For two columns of 50% and a full width column below them.
 Adaptive Grid
 =============
 
-These set of classes allow you to easily control the behaviour of columns depending on the screen size without having to mess with the media queiries themselves.
+These set of classes allow you to easily control the behavior of columns depending on the screen size without having to mess with the media queiries themselves.
 
 | Name       | Screen Size      | Example Class
 | ---------- | ---------------- | -------------
@@ -82,9 +88,11 @@ These set of classes allow you to easily control the behaviour of columns depend
 | large      | 1024 to 1199px   | .**large**\_to\_33
 | larger     | 1200px and more  | .**larger**\_to\_20
 
+These sizes can be edited via the variables $mobile-small-portrait-width, $mobile-small-landscape-width, $mobile-small-landscape-width, $mobile-large-width, $mobile-large-width, $mobile-large-width, $tablet-portrait-width, $tablet-landscape-width and $desktop-width.
+
 **Example:** Both columns 100% on iPhone-sized screens
 
-```css
+```html
 
 <div class="grid gut10">
 	<div class="col perc50 smallest_to_100"></div>
@@ -95,7 +103,7 @@ These set of classes allow you to easily control the behaviour of columns depend
 
 **Example:** First and second column 50% on iPad-sized screens
 
-```css
+```html
 
 <div class="grid gut10">
 	<div class="col perc30 medium_to_50"></div>
@@ -104,13 +112,25 @@ These set of classes allow you to easily control the behaviour of columns depend
 	
 ```
 
-Adding New Column and Gutter Sizes
-=======================
+You can add similar syntax to the gutter. For example:
 
-To create a new column size, add to the $column_sizes SCSS variable.
+```html
 
-$column_sizes: **5** 10 16.66666666666667 20 25 30 33.3333333333 40 45 50 55 60 66.6666666666 70 80 100;
+<div class="grid gut10 smallest-to-5">
+	<div class="col perc30 medium_to_50"></div>
+	<div class="col perc70 medium_to_50"></div>
+</div>
+	
+Show and Hide
+=============
 
-To add a new gutter size, add to the $gutter_sizes SCSS variable.
+Use .**size**-hide or **size**-show to show of hide any element (note: The -show option will hide the element by default). For example:
 
-$gutter_sizes: 5 10 15 20 **25** 30 40 50;
+```html
+
+<div class="grid gut10">
+	<div class="col perc30 medium_to_50 medium-hide"></div>
+	<div class="col perc70 medium_to_50 medium-show"></div>
+</div>
+	
+```

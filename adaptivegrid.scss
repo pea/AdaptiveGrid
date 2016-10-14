@@ -18,7 +18,7 @@ $column-sizes: 10 16.66666666666667 20 25 30 33.3333333333 40 45 50 55 60 66.666
 
 /* List of custom gutter sizes in pixels */
 
-$gutter-sizes: 5 10 15 20 30 40 50;
+$gutter-sizes: 5 10 15 20 30 40 50 60 70 100;
 
 /* Delimiter for class names (- or _) */
 
@@ -110,6 +110,17 @@ $desktop-width: 1200px;
     
     /* Grid */
     .grid {
+        @each $size in $gutter-sizes {
+            &.smallest#{$delimiter}to#{$delimiter}#{floor($size)} {
+                margin: #{"-"}#{$size/2}#{"px"};
+            }
+            &.smallest#{$delimiter}to#{$delimiter}#{floor($size)} > .col {
+                padding: #{$size/2}#{"px"};
+            }
+            &.smallest#{$delimiter}to#{$delimiter}#{floor($size)}.outergut {
+                margin: 0; padding: #{$size/2}#{"px"};
+            }
+        }
         .col {
             @each $size in $column-sizes {
                 &.smallest#{$delimiter}to#{$delimiter}#{floor($size)} {
@@ -136,6 +147,17 @@ $desktop-width: 1200px;
 
     /* Grid */
     .grid {
+        @each $size in $gutter-sizes {
+            &.smaller#{$delimiter}to#{$delimiter}#{floor($size)} {
+                margin: #{"-"}#{$size/2}#{"px"};
+            }
+            &.smaller#{$delimiter}to#{$delimiter}#{floor($size)} > .col {
+                padding: #{$size/2}#{"px"};
+            }
+            &.smaller#{$delimiter}to#{$delimiter}#{floor($size)}.outergut {
+                margin: 0; padding: #{$size/2}#{"px"};
+            }
+        }
         .col {
             @each $size in $column-sizes {
                 &.smaller#{$delimiter}to#{$delimiter}#{floor($size)} {
@@ -162,6 +184,17 @@ $desktop-width: 1200px;
 
     /* Grid */
     .grid {
+        @each $size in $gutter-sizes {
+            &.small#{$delimiter}to#{$delimiter}#{floor($size)} {
+                margin: #{"-"}#{$size/2}#{"px"};
+            }
+            &.small#{$delimiter}to#{$delimiter}#{floor($size)} > .col {
+                padding: #{$size/2}#{"px"};
+            }
+            &.small#{$delimiter}to#{$delimiter}#{floor($size)}.outergut {
+                margin: 0; padding: #{$size/2}#{"px"};
+            }
+        }
         .col {
             @each $size in $column-sizes {
                 &.small#{$delimiter}to#{$delimiter}#{floor($size)} {
@@ -188,6 +221,17 @@ $desktop-width: 1200px;
     
     /* Grid */
     .grid {
+        @each $size in $gutter-sizes {
+            &.medium#{$delimiter}to#{$delimiter}#{floor($size)} {
+                margin: #{"-"}#{$size/2}#{"px"};
+            }
+            &.medium#{$delimiter}to#{$delimiter}#{floor($size)} > .col {
+                padding: #{$size/2}#{"px"};
+            }
+            &.medium#{$delimiter}to#{$delimiter}#{floor($size)}.outergut {
+                margin: 0; padding: #{$size/2}#{"px"};
+            }
+        }
         .col {
             @each $size in $column-sizes {
                 &.medium#{$delimiter}to#{$delimiter}#{floor($size)} {
@@ -214,6 +258,17 @@ $desktop-width: 1200px;
 
     /* Grid */
     .grid {
+        @each $size in $gutter-sizes {
+            &.large#{$delimiter}to#{$delimiter}#{floor($size)} {
+                margin: #{"-"}#{$size/2}#{"px"};
+            }
+            &.large#{$delimiter}to#{$delimiter}#{floor($size)} > .col {
+                padding: #{$size/2}#{"px"};
+            }
+            &.large#{$delimiter}to#{$delimiter}#{floor($size)}.outergut {
+                margin: 0; padding: #{$size/2}#{"px"};
+            }
+        }
         .col {
             @each $size in $column-sizes {
                 &.large#{$delimiter}to#{$delimiter}#{floor($size)} {
@@ -240,6 +295,17 @@ $desktop-width: 1200px;
 
     /* Grid */
     .grid {
+        @each $size in $gutter-sizes {
+            &.larger#{$delimiter}to#{$delimiter}#{floor($size)} {
+                margin: #{"-"}#{$size/2}#{"px"};
+            }
+            &.larger#{$delimiter}to#{$delimiter}#{floor($size)} > .col {
+                padding: #{$size/2}#{"px"};
+            }
+            &.larger#{$delimiter}to#{$delimiter}#{floor($size)}.outergut {
+                margin: 0; padding: #{$size/2}#{"px"};
+            }
+        }
         .col {
             @each $size in $column-sizes {
                 &.larger#{$delimiter}to#{$delimiter}#{floor($size)} {
