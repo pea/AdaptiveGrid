@@ -8,7 +8,7 @@ Example
 
 ```html
 
-<div class="grid gut10">
+<div class="grid gut10 medium-to-30">
 	<div class="col perc20 smallest-to-100 smaller-to-50 small-to-50 medium-to-50">
 		<h1>Column 1</h1>
 	</div>
