@@ -120,6 +120,7 @@ Column sizes can be edited via the variables $mobile-small-portrait-width, $mobi
 	<div class="col perc30 medium-to-50"></div>
 	<div class="col perc70 medium-to-50"></div>
 </div>
+```
 	
 Show and Hide
 =============
