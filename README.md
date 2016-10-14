@@ -127,7 +127,7 @@ Show and Hide
 
 Show and hide any element with .**size**-hide or **size**-show.
 
-note: The -show option will hide the element by default.
+Note: The -show option will hide the element by default.
 
 **Example:** Show the second column and hide the first column between screen sizes of 768px to 1023px.
 
