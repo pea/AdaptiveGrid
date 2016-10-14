@@ -9,16 +9,16 @@ Example
 ```html
 
 <div class="grid gut10">
-	<div class="col perc20 smallest_to_100 smaller_to_50 small_to_50 medium_to_50">
+	<div class="col perc20 smallest-to-100 smaller-to-50 small-to-50 medium-to-50">
 		<h1>Column 1</h1>
 	</div>
-	<div class="col perc80 smallest_to_100 smaller_to_50 small_to_50 medium_to_50">
+	<div class="col perc80 smallest-to-100 smaller-to-50 small-to-50 medium-to-50">
 		<h1>Column 2</h1>
 	</div>
-	<div class="col perc50 smallest_to_100">
+	<div class="col perc50 smallest-to-100">
 		<h1>Column 3</h1>
 	</div>
-	<div class="col perc50 smallest_to_100">
+	<div class="col perc50 smallest-to-100">
 		<h1>Column 4</h1>
 	</div>
 </div>
@@ -32,7 +32,7 @@ Gutter Size
 ===========
 The number of pixels between the columns.
 
-Either: gut5, gut10, gut15, gut20, gut30, gut40, gut50, gut60, gut70, gut100;
+Either: gut5, gut10, gut15, gut20, gut30, gut40, gut50, gut60, gut70, gut100
 
 Editable via the $gutter-sizes variable.
 
@@ -77,26 +77,26 @@ For two columns of 50% and a full width column below them.
 Adaptive Grid
 =============
 
-These set of classes allow you to easily control the behavior of columns depending on the screen size without having to mess with the media queiries themselves.
+These set of classes allow you to easily control the behavior of columns and gutter depending on the screen size without having to mess with the media queries themselves.
 
-| Name       | Screen Size      | Example Class
-| ---------- | ---------------- | -------------
-| smallest   | 0px to 480px     | .**smallest**\_to\_100
-| smaller    | 481px to 600px   | .**smaller**\_to\_100
-| small      | 601px to 767px   | .**small**\_to\_80
-| medium     | 768px to 1023px  | .**medium**\_to\_50
-| large      | 1024 to 1199px   | .**large**\_to\_33
-| larger     | 1200px and more  | .**larger**\_to\_20
+| Name       | Screen Size      | Example Column Class   | Example Gutter Class
+| ---------- | ---------------- | -----------------------| --------------------
+| smallest   | 0px to 480px     | .**smallest**\-to\-100 | .**smallest**\-to\-5
+| smaller    | 481px to 600px   | .**smaller**\-to\-100  | .**smaller**\-to\-10
+| small      | 601px to 767px   | .**small**\-to\-80     | .**small**\-to\-15
+| medium     | 768px to 1023px  | .**medium**\-to\-50    | .**medium**\-to\-20 
+| large      | 1024 to 1199px   | .**large**\-to\-33     | .**large**\-to\-30  
+| larger     | 1200px and more  | .**larger**\-to\-20    | .**larger**\-to\-40
 
-These sizes can be edited via the variables $mobile-small-portrait-width, $mobile-small-landscape-width, $mobile-small-landscape-width, $mobile-large-width, $mobile-large-width, $mobile-large-width, $tablet-portrait-width, $tablet-landscape-width and $desktop-width.
+Column sizes can be edited via the variables $mobile-small-portrait-width, $mobile-small-landscape-width, $mobile-small-landscape-width, $mobile-large-width, $mobile-large-width, $mobile-large-width, $tablet-portrait-width, $tablet-landscape-width and $desktop-width.
 
 **Example:** Both columns 100% on iPhone-sized screens
 
 ```html
 
 <div class="grid gut10">
-	<div class="col perc50 smallest_to_100"></div>
-	<div class="col perc50 smallest_to_100"></div>
+	<div class="col perc50 smallest-to-100"></div>
+	<div class="col perc50 smallest-to-100"></div>
 </div>
 	
 ```
@@ -106,19 +106,19 @@ These sizes can be edited via the variables $mobile-small-portrait-width, $mobil
 ```html
 
 <div class="grid gut10">
-	<div class="col perc30 medium_to_50"></div>
-	<div class="col perc70 medium_to_50"></div>
+	<div class="col perc30 medium-to-50"></div>
+	<div class="col perc70 medium-to-50"></div>
 </div>
 	
 ```
 
-You can add similar syntax to the gutter. For example:
+**Example:** You can add similar syntax to the gutter. For example:
 
 ```html
 
 <div class="grid gut10 smallest-to-5">
-	<div class="col perc30 medium_to_50"></div>
-	<div class="col perc70 medium_to_50"></div>
+	<div class="col perc30 medium-to-50"></div>
+	<div class="col perc70 medium-to-50"></div>
 </div>
 	
 Show and Hide
@@ -129,8 +129,8 @@ Use .**size**-hide or **size**-show to show of hide any element (note: The -show
 ```html
 
 <div class="grid gut10">
-	<div class="col perc30 medium_to_50 medium-hide"></div>
-	<div class="col perc70 medium_to_50 medium-show"></div>
+	<div class="col perc30 medium-to-50 medium-hide"></div>
+	<div class="col perc70 medium-to-50 medium-show"></div>
 </div>
 	
 ```
