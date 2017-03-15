@@ -38,12 +38,12 @@ $desktop-width: 1200px;
     /* The Grid */
     
     display: flex;
-    display: -webkit-flex;
     flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-flex-wrap: wrap;
+    display: -webkit-flex;
     
     /* Column Sizes */
     
@@ -52,6 +52,9 @@ $desktop-width: 1200px;
             &.perc#{floor($size)} {
                 width: #{$size}#{"%"};
             } 
+        }
+        &.fill-width {
+            flex: 1
         }
     }
     
