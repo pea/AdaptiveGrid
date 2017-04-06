@@ -45,6 +45,10 @@ $desktop-width: 1200px;
     -webkit-flex-wrap: wrap;
     display: -webkit-flex;
     
+    &.justify-center {
+        justify-content: center;
+    }
+    
     /* Column Sizes */
     
     .col {
