@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tests</title>
+    <link rel="stylesheet" href="adaptivegrid.css">
+    <style>
+    .placeholder1 {
+        background-color: green;
+        width: 100%;
+        height: 50px;
+    }
+    </style>
+</head>
+<body>
+
+<h2>Responsive</h2>
+
+<div class="grid gut20">
+    <div class="col perc40">
+        <div class="placeholder1"></div>
+    </div>
+    <div class="col perc60">
+        <div class="placeholder1"></div>
+    </div>
+    <div class="col perc80">
+        <div class="placeholder1"></div>
+    </div>
+    <div class="col perc20">
+        <div class="placeholder1"></div>
+    </div>
+</div>
+
+<h2>Fill Width</h2>
+
+<div class="grid gut20">
+    <div class="col" style="width: 100px">
+        <div class="placeholder1"></div>
+    </div>
+    <div class="col fill-width">
+        <div class="placeholder1"></div>
+    </div>
+</div>
+
+<h2>Horizontal Position Left</h2>
+
+<div class="grid gut20 position-left">
+    <div class="col perc30">
+        <div class="placeholder1"></div>
+    </div>
+</div>
+
+<h2>Horizontal Position Center</h2>
+
+<div class="grid gut20 position-center">
+    <div class="col perc30">
+        <div class="placeholder1"></div>
+    </div>
+</div>
+
+<h2>Horizontal Position Right</h2>
+
+<div class="grid gut20 position-right">
+    <div class="col perc30">
+        <div class="placeholder1"></div>
+    </div>
+</div>
+
+<h2>Vertical Position</h2>
+
+<div class="grid gut20 position-middle" style="height: 200px; background-color: blue">
+    <div class="col perc100" style="background-color: yellow">
+        <div class="placeholder1"></div>
+    </div>
+</div>
+
+<h2>Vertical and Horizontal Position</h2>
+
+<div class="grid gut20 position-middle position-center" style="height: 200px; background-color: blue">
+    <div class="col perc30">
+        <div class="placeholder1"></div>
+    </div>
+</div>
+
+<h2>Content In Situ</h2>
+
+<div class="grid gut20">
+    <div class="col perc40">
+        <div style="background-color: green; padding: 20px; height: 100%">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae volutpat metus. Quisque pulvinar, velit in mollis semper, arcu ipsum finibus mi, a blandit lacus arcu vitae massa.
+        </div>
+    </div>
+    <div class="col perc60">
+        <div class="grid position-middle position-center" style="height: 200px">
+            <div class="col perc50" style="text-align: center">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae volutpat metus. Quisque pulvinar, velit in mollis semper, arcu ipsum finibus mi, a blandit lacus arcu vitae massa.
+            </div>
+        </div>
+    </div>
+    <div class="col perc80">
+        <div class="placeholder1"></div>
+    </div>
+    <div class="col perc20">
+        <div class="placeholder1"></div>
+    </div>
+</div>
+<script src="modernizr.js"></script>
+</body>
+</html>

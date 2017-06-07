@@ -1,0 +1,1227 @@
+/**
+* AdaptiveGrid
+* AdaptiveGrid is a fluid CSS grid framework which adapts to the screen size.
+* https://github.com/pea/AdaptiveGrid
+*/
+/* Column Defaults */
+.col {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* List of custom column sizes in percentages */
+/* List of custom gutter sizes in pixels */
+/* Delimiter for class names (- or _) */
+/* Screen sizes */
+.grid {
+  /* The Grid */
+  -js-display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-flex-wrap: wrap;
+  display: -webkit-flex;
+  /* Column Sizes */
+  /* Gutter */
+  /* Outer Gutter */
+}
+.grid * {
+  box-sizing: border-box;
+}
+.grid.position-left {
+  justify-content: flex-start;
+}
+.grid.position-center {
+  justify-content: center;
+}
+.grid.position-right {
+  justify-content: flex-end;
+}
+.grid.position-top {
+  align-items: flex-start;
+}
+.grid.position-middle {
+  align-items: center;
+}
+.grid.position-bottom {
+  align-items: flex-end;
+}
+.grid .col.perc10 {
+  width: 10%;
+}
+.grid .col.perc16 {
+  width: 16.66667%;
+}
+.grid .col.perc20 {
+  width: 20%;
+}
+.grid .col.perc25 {
+  width: 25%;
+}
+.grid .col.perc30 {
+  width: 30%;
+}
+.grid .col.perc33 {
+  width: 33.33333%;
+}
+.grid .col.perc40 {
+  width: 40%;
+}
+.grid .col.perc45 {
+  width: 45%;
+}
+.grid .col.perc50 {
+  width: 50%;
+}
+.grid .col.perc55 {
+  width: 55%;
+}
+.grid .col.perc60 {
+  width: 60%;
+}
+.grid .col.perc66 {
+  width: 66.66667%;
+}
+.grid .col.perc70 {
+  width: 70%;
+}
+.grid .col.perc80 {
+  width: 80%;
+}
+.grid .col.perc100 {
+  width: 100%;
+}
+.grid .col.fill-width {
+  flex: 1;
+}
+.grid.gut5 {
+  margin: -2.5px;
+}
+.grid.gut10 {
+  margin: -5px;
+}
+.grid.gut15 {
+  margin: -7.5px;
+}
+.grid.gut20 {
+  margin: -10px;
+}
+.grid.gut30 {
+  margin: -15px;
+}
+.grid.gut40 {
+  margin: -20px;
+}
+.grid.gut50 {
+  margin: -25px;
+}
+.grid.gut60 {
+  margin: -30px;
+}
+.grid.gut70 {
+  margin: -35px;
+}
+.grid.gut100 {
+  margin: -50px;
+}
+.grid.gut5 > .col {
+  padding: 2.5px;
+}
+.grid.gut10 > .col {
+  padding: 5px;
+}
+.grid.gut15 > .col {
+  padding: 7.5px;
+}
+.grid.gut20 > .col {
+  padding: 10px;
+}
+.grid.gut30 > .col {
+  padding: 15px;
+}
+.grid.gut40 > .col {
+  padding: 20px;
+}
+.grid.gut50 > .col {
+  padding: 25px;
+}
+.grid.gut60 > .col {
+  padding: 30px;
+}
+.grid.gut70 > .col {
+  padding: 35px;
+}
+.grid.gut100 > .col {
+  padding: 50px;
+}
+.grid.gut5.outergut {
+  margin: 0;
+  padding: 2.5px;
+}
+.grid.gut10.outergut {
+  margin: 0;
+  padding: 5px;
+}
+.grid.gut15.outergut {
+  margin: 0;
+  padding: 7.5px;
+}
+.grid.gut20.outergut {
+  margin: 0;
+  padding: 10px;
+}
+.grid.gut30.outergut {
+  margin: 0;
+  padding: 15px;
+}
+.grid.gut40.outergut {
+  margin: 0;
+  padding: 20px;
+}
+.grid.gut50.outergut {
+  margin: 0;
+  padding: 25px;
+}
+.grid.gut60.outergut {
+  margin: 0;
+  padding: 30px;
+}
+.grid.gut70.outergut {
+  margin: 0;
+  padding: 35px;
+}
+.grid.gut100.outergut {
+  margin: 0;
+  padding: 50px;
+}
+
+/**
+ * Showing
+ */
+.smallest-show,
+.smaller-show,
+.small-show,
+.medium-show,
+.large-show,
+.larger-show {
+  display: none;
+}
+
+/**
+* Responses 
+*/
+/* Phones and smartphones in portrait */
+@media all and (min-width: 0) and (max-width: 480px) {
+  /* Smallest */
+  /**
+  * Adaptive Framework
+  */
+  /* Hiding */
+  .smallest-hide {
+    display: none;
+  }
+
+  /* Showing */
+  .smallest-show {
+    display: block;
+  }
+
+  /* Grid */
+  .grid.smallest-to-5 {
+    margin: -2.5px;
+  }
+  .grid.smallest-to-5 > .col {
+    padding: 2.5px;
+  }
+  .grid.smallest-to-5.outergut {
+    margin: 0;
+    padding: 2.5px;
+  }
+  .grid.smallest-to-10 {
+    margin: -5px;
+  }
+  .grid.smallest-to-10 > .col {
+    padding: 5px;
+  }
+  .grid.smallest-to-10.outergut {
+    margin: 0;
+    padding: 5px;
+  }
+  .grid.smallest-to-15 {
+    margin: -7.5px;
+  }
+  .grid.smallest-to-15 > .col {
+    padding: 7.5px;
+  }
+  .grid.smallest-to-15.outergut {
+    margin: 0;
+    padding: 7.5px;
+  }
+  .grid.smallest-to-20 {
+    margin: -10px;
+  }
+  .grid.smallest-to-20 > .col {
+    padding: 10px;
+  }
+  .grid.smallest-to-20.outergut {
+    margin: 0;
+    padding: 10px;
+  }
+  .grid.smallest-to-30 {
+    margin: -15px;
+  }
+  .grid.smallest-to-30 > .col {
+    padding: 15px;
+  }
+  .grid.smallest-to-30.outergut {
+    margin: 0;
+    padding: 15px;
+  }
+  .grid.smallest-to-40 {
+    margin: -20px;
+  }
+  .grid.smallest-to-40 > .col {
+    padding: 20px;
+  }
+  .grid.smallest-to-40.outergut {
+    margin: 0;
+    padding: 20px;
+  }
+  .grid.smallest-to-50 {
+    margin: -25px;
+  }
+  .grid.smallest-to-50 > .col {
+    padding: 25px;
+  }
+  .grid.smallest-to-50.outergut {
+    margin: 0;
+    padding: 25px;
+  }
+  .grid.smallest-to-60 {
+    margin: -30px;
+  }
+  .grid.smallest-to-60 > .col {
+    padding: 30px;
+  }
+  .grid.smallest-to-60.outergut {
+    margin: 0;
+    padding: 30px;
+  }
+  .grid.smallest-to-70 {
+    margin: -35px;
+  }
+  .grid.smallest-to-70 > .col {
+    padding: 35px;
+  }
+  .grid.smallest-to-70.outergut {
+    margin: 0;
+    padding: 35px;
+  }
+  .grid.smallest-to-100 {
+    margin: -50px;
+  }
+  .grid.smallest-to-100 > .col {
+    padding: 50px;
+  }
+  .grid.smallest-to-100.outergut {
+    margin: 0;
+    padding: 50px;
+  }
+  .grid .col.smallest-to-10 {
+    width: 10%;
+  }
+  .grid .col.smallest-to-16 {
+    width: 16.66667%;
+  }
+  .grid .col.smallest-to-20 {
+    width: 20%;
+  }
+  .grid .col.smallest-to-25 {
+    width: 25%;
+  }
+  .grid .col.smallest-to-30 {
+    width: 30%;
+  }
+  .grid .col.smallest-to-33 {
+    width: 33.33333%;
+  }
+  .grid .col.smallest-to-40 {
+    width: 40%;
+  }
+  .grid .col.smallest-to-45 {
+    width: 45%;
+  }
+  .grid .col.smallest-to-50 {
+    width: 50%;
+  }
+  .grid .col.smallest-to-55 {
+    width: 55%;
+  }
+  .grid .col.smallest-to-60 {
+    width: 60%;
+  }
+  .grid .col.smallest-to-66 {
+    width: 66.66667%;
+  }
+  .grid .col.smallest-to-70 {
+    width: 70%;
+  }
+  .grid .col.smallest-to-80 {
+    width: 80%;
+  }
+  .grid .col.smallest-to-100 {
+    width: 100%;
+  }
+}
+/* Small smartphones in landscape (iPhone in landscape) */
+@media all and (min-width: 481px) and (max-width: 600px) {
+  /* Smaller */
+  /**
+  * Adaptive Framework
+  */
+  /* Hiding */
+  .smaller-hide {
+    display: none;
+  }
+
+  /* Showing */
+  .smaller-show {
+    display: block;
+  }
+
+  /* Grid */
+  .grid.smaller-to-5 {
+    margin: -2.5px;
+  }
+  .grid.smaller-to-5 > .col {
+    padding: 2.5px;
+  }
+  .grid.smaller-to-5.outergut {
+    margin: 0;
+    padding: 2.5px;
+  }
+  .grid.smaller-to-10 {
+    margin: -5px;
+  }
+  .grid.smaller-to-10 > .col {
+    padding: 5px;
+  }
+  .grid.smaller-to-10.outergut {
+    margin: 0;
+    padding: 5px;
+  }
+  .grid.smaller-to-15 {
+    margin: -7.5px;
+  }
+  .grid.smaller-to-15 > .col {
+    padding: 7.5px;
+  }
+  .grid.smaller-to-15.outergut {
+    margin: 0;
+    padding: 7.5px;
+  }
+  .grid.smaller-to-20 {
+    margin: -10px;
+  }
+  .grid.smaller-to-20 > .col {
+    padding: 10px;
+  }
+  .grid.smaller-to-20.outergut {
+    margin: 0;
+    padding: 10px;
+  }
+  .grid.smaller-to-30 {
+    margin: -15px;
+  }
+  .grid.smaller-to-30 > .col {
+    padding: 15px;
+  }
+  .grid.smaller-to-30.outergut {
+    margin: 0;
+    padding: 15px;
+  }
+  .grid.smaller-to-40 {
+    margin: -20px;
+  }
+  .grid.smaller-to-40 > .col {
+    padding: 20px;
+  }
+  .grid.smaller-to-40.outergut {
+    margin: 0;
+    padding: 20px;
+  }
+  .grid.smaller-to-50 {
+    margin: -25px;
+  }
+  .grid.smaller-to-50 > .col {
+    padding: 25px;
+  }
+  .grid.smaller-to-50.outergut {
+    margin: 0;
+    padding: 25px;
+  }
+  .grid.smaller-to-60 {
+    margin: -30px;
+  }
+  .grid.smaller-to-60 > .col {
+    padding: 30px;
+  }
+  .grid.smaller-to-60.outergut {
+    margin: 0;
+    padding: 30px;
+  }
+  .grid.smaller-to-70 {
+    margin: -35px;
+  }
+  .grid.smaller-to-70 > .col {
+    padding: 35px;
+  }
+  .grid.smaller-to-70.outergut {
+    margin: 0;
+    padding: 35px;
+  }
+  .grid.smaller-to-100 {
+    margin: -50px;
+  }
+  .grid.smaller-to-100 > .col {
+    padding: 50px;
+  }
+  .grid.smaller-to-100.outergut {
+    margin: 0;
+    padding: 50px;
+  }
+  .grid .col.smaller-to-10 {
+    width: 10%;
+  }
+  .grid .col.smaller-to-16 {
+    width: 16.66667%;
+  }
+  .grid .col.smaller-to-20 {
+    width: 20%;
+  }
+  .grid .col.smaller-to-25 {
+    width: 25%;
+  }
+  .grid .col.smaller-to-30 {
+    width: 30%;
+  }
+  .grid .col.smaller-to-33 {
+    width: 33.33333%;
+  }
+  .grid .col.smaller-to-40 {
+    width: 40%;
+  }
+  .grid .col.smaller-to-45 {
+    width: 45%;
+  }
+  .grid .col.smaller-to-50 {
+    width: 50%;
+  }
+  .grid .col.smaller-to-55 {
+    width: 55%;
+  }
+  .grid .col.smaller-to-60 {
+    width: 60%;
+  }
+  .grid .col.smaller-to-66 {
+    width: 66.66667%;
+  }
+  .grid .col.smaller-to-70 {
+    width: 70%;
+  }
+  .grid .col.smaller-to-80 {
+    width: 80%;
+  }
+  .grid .col.smaller-to-100 {
+    width: 100%;
+  }
+}
+/* Small tablets and large phones in landscape (Nexus 7) */
+@media all and (min-width: 601px) and (max-width: 767px) {
+  /* Small */
+  /**
+  * Adaptive Framework
+  */
+  /* Hiding */
+  .small-hide {
+    display: none;
+  }
+
+  /* Showing */
+  .small-show {
+    display: block;
+  }
+
+  /* Grid */
+  .grid.small-to-5 {
+    margin: -2.5px;
+  }
+  .grid.small-to-5 > .col {
+    padding: 2.5px;
+  }
+  .grid.small-to-5.outergut {
+    margin: 0;
+    padding: 2.5px;
+  }
+  .grid.small-to-10 {
+    margin: -5px;
+  }
+  .grid.small-to-10 > .col {
+    padding: 5px;
+  }
+  .grid.small-to-10.outergut {
+    margin: 0;
+    padding: 5px;
+  }
+  .grid.small-to-15 {
+    margin: -7.5px;
+  }
+  .grid.small-to-15 > .col {
+    padding: 7.5px;
+  }
+  .grid.small-to-15.outergut {
+    margin: 0;
+    padding: 7.5px;
+  }
+  .grid.small-to-20 {
+    margin: -10px;
+  }
+  .grid.small-to-20 > .col {
+    padding: 10px;
+  }
+  .grid.small-to-20.outergut {
+    margin: 0;
+    padding: 10px;
+  }
+  .grid.small-to-30 {
+    margin: -15px;
+  }
+  .grid.small-to-30 > .col {
+    padding: 15px;
+  }
+  .grid.small-to-30.outergut {
+    margin: 0;
+    padding: 15px;
+  }
+  .grid.small-to-40 {
+    margin: -20px;
+  }
+  .grid.small-to-40 > .col {
+    padding: 20px;
+  }
+  .grid.small-to-40.outergut {
+    margin: 0;
+    padding: 20px;
+  }
+  .grid.small-to-50 {
+    margin: -25px;
+  }
+  .grid.small-to-50 > .col {
+    padding: 25px;
+  }
+  .grid.small-to-50.outergut {
+    margin: 0;
+    padding: 25px;
+  }
+  .grid.small-to-60 {
+    margin: -30px;
+  }
+  .grid.small-to-60 > .col {
+    padding: 30px;
+  }
+  .grid.small-to-60.outergut {
+    margin: 0;
+    padding: 30px;
+  }
+  .grid.small-to-70 {
+    margin: -35px;
+  }
+  .grid.small-to-70 > .col {
+    padding: 35px;
+  }
+  .grid.small-to-70.outergut {
+    margin: 0;
+    padding: 35px;
+  }
+  .grid.small-to-100 {
+    margin: -50px;
+  }
+  .grid.small-to-100 > .col {
+    padding: 50px;
+  }
+  .grid.small-to-100.outergut {
+    margin: 0;
+    padding: 50px;
+  }
+  .grid .col.small-to-10 {
+    width: 10%;
+  }
+  .grid .col.small-to-16 {
+    width: 16.66667%;
+  }
+  .grid .col.small-to-20 {
+    width: 20%;
+  }
+  .grid .col.small-to-25 {
+    width: 25%;
+  }
+  .grid .col.small-to-30 {
+    width: 30%;
+  }
+  .grid .col.small-to-33 {
+    width: 33.33333%;
+  }
+  .grid .col.small-to-40 {
+    width: 40%;
+  }
+  .grid .col.small-to-45 {
+    width: 45%;
+  }
+  .grid .col.small-to-50 {
+    width: 50%;
+  }
+  .grid .col.small-to-55 {
+    width: 55%;
+  }
+  .grid .col.small-to-60 {
+    width: 60%;
+  }
+  .grid .col.small-to-66 {
+    width: 66.66667%;
+  }
+  .grid .col.small-to-70 {
+    width: 70%;
+  }
+  .grid .col.small-to-80 {
+    width: 80%;
+  }
+  .grid .col.small-to-100 {
+    width: 100%;
+  }
+}
+/* Large tablets and Facebook iframe (iPad in portrait, Facebook on desktop) */
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  /* Medium */
+  /**
+  * Adaptive Framework
+  */
+  /* Hiding */
+  .medium-hide {
+    display: none;
+  }
+
+  /* Showing */
+  .medium-show {
+    display: block;
+  }
+
+  /* Grid */
+  .grid.medium-to-5 {
+    margin: -2.5px;
+  }
+  .grid.medium-to-5 > .col {
+    padding: 2.5px;
+  }
+  .grid.medium-to-5.outergut {
+    margin: 0;
+    padding: 2.5px;
+  }
+  .grid.medium-to-10 {
+    margin: -5px;
+  }
+  .grid.medium-to-10 > .col {
+    padding: 5px;
+  }
+  .grid.medium-to-10.outergut {
+    margin: 0;
+    padding: 5px;
+  }
+  .grid.medium-to-15 {
+    margin: -7.5px;
+  }
+  .grid.medium-to-15 > .col {
+    padding: 7.5px;
+  }
+  .grid.medium-to-15.outergut {
+    margin: 0;
+    padding: 7.5px;
+  }
+  .grid.medium-to-20 {
+    margin: -10px;
+  }
+  .grid.medium-to-20 > .col {
+    padding: 10px;
+  }
+  .grid.medium-to-20.outergut {
+    margin: 0;
+    padding: 10px;
+  }
+  .grid.medium-to-30 {
+    margin: -15px;
+  }
+  .grid.medium-to-30 > .col {
+    padding: 15px;
+  }
+  .grid.medium-to-30.outergut {
+    margin: 0;
+    padding: 15px;
+  }
+  .grid.medium-to-40 {
+    margin: -20px;
+  }
+  .grid.medium-to-40 > .col {
+    padding: 20px;
+  }
+  .grid.medium-to-40.outergut {
+    margin: 0;
+    padding: 20px;
+  }
+  .grid.medium-to-50 {
+    margin: -25px;
+  }
+  .grid.medium-to-50 > .col {
+    padding: 25px;
+  }
+  .grid.medium-to-50.outergut {
+    margin: 0;
+    padding: 25px;
+  }
+  .grid.medium-to-60 {
+    margin: -30px;
+  }
+  .grid.medium-to-60 > .col {
+    padding: 30px;
+  }
+  .grid.medium-to-60.outergut {
+    margin: 0;
+    padding: 30px;
+  }
+  .grid.medium-to-70 {
+    margin: -35px;
+  }
+  .grid.medium-to-70 > .col {
+    padding: 35px;
+  }
+  .grid.medium-to-70.outergut {
+    margin: 0;
+    padding: 35px;
+  }
+  .grid.medium-to-100 {
+    margin: -50px;
+  }
+  .grid.medium-to-100 > .col {
+    padding: 50px;
+  }
+  .grid.medium-to-100.outergut {
+    margin: 0;
+    padding: 50px;
+  }
+  .grid .col.medium-to-10 {
+    width: 10%;
+  }
+  .grid .col.medium-to-16 {
+    width: 16.66667%;
+  }
+  .grid .col.medium-to-20 {
+    width: 20%;
+  }
+  .grid .col.medium-to-25 {
+    width: 25%;
+  }
+  .grid .col.medium-to-30 {
+    width: 30%;
+  }
+  .grid .col.medium-to-33 {
+    width: 33.33333%;
+  }
+  .grid .col.medium-to-40 {
+    width: 40%;
+  }
+  .grid .col.medium-to-45 {
+    width: 45%;
+  }
+  .grid .col.medium-to-50 {
+    width: 50%;
+  }
+  .grid .col.medium-to-55 {
+    width: 55%;
+  }
+  .grid .col.medium-to-60 {
+    width: 60%;
+  }
+  .grid .col.medium-to-66 {
+    width: 66.66667%;
+  }
+  .grid .col.medium-to-70 {
+    width: 70%;
+  }
+  .grid .col.medium-to-80 {
+    width: 80%;
+  }
+  .grid .col.medium-to-100 {
+    width: 100%;
+  }
+}
+/* Large tablets (iPad in landscape) */
+@media all and (min-width: 1024px) and (max-width: 1199px) {
+  /* Large */
+  /**
+  * Adaptive Framework
+  */
+  /* Hiding */
+  .large-hide {
+    display: none;
+  }
+
+  /* Showing */
+  .large-show {
+    display: block;
+  }
+
+  /* Grid */
+  .grid.large-to-5 {
+    margin: -2.5px;
+  }
+  .grid.large-to-5 > .col {
+    padding: 2.5px;
+  }
+  .grid.large-to-5.outergut {
+    margin: 0;
+    padding: 2.5px;
+  }
+  .grid.large-to-10 {
+    margin: -5px;
+  }
+  .grid.large-to-10 > .col {
+    padding: 5px;
+  }
+  .grid.large-to-10.outergut {
+    margin: 0;
+    padding: 5px;
+  }
+  .grid.large-to-15 {
+    margin: -7.5px;
+  }
+  .grid.large-to-15 > .col {
+    padding: 7.5px;
+  }
+  .grid.large-to-15.outergut {
+    margin: 0;
+    padding: 7.5px;
+  }
+  .grid.large-to-20 {
+    margin: -10px;
+  }
+  .grid.large-to-20 > .col {
+    padding: 10px;
+  }
+  .grid.large-to-20.outergut {
+    margin: 0;
+    padding: 10px;
+  }
+  .grid.large-to-30 {
+    margin: -15px;
+  }
+  .grid.large-to-30 > .col {
+    padding: 15px;
+  }
+  .grid.large-to-30.outergut {
+    margin: 0;
+    padding: 15px;
+  }
+  .grid.large-to-40 {
+    margin: -20px;
+  }
+  .grid.large-to-40 > .col {
+    padding: 20px;
+  }
+  .grid.large-to-40.outergut {
+    margin: 0;
+    padding: 20px;
+  }
+  .grid.large-to-50 {
+    margin: -25px;
+  }
+  .grid.large-to-50 > .col {
+    padding: 25px;
+  }
+  .grid.large-to-50.outergut {
+    margin: 0;
+    padding: 25px;
+  }
+  .grid.large-to-60 {
+    margin: -30px;
+  }
+  .grid.large-to-60 > .col {
+    padding: 30px;
+  }
+  .grid.large-to-60.outergut {
+    margin: 0;
+    padding: 30px;
+  }
+  .grid.large-to-70 {
+    margin: -35px;
+  }
+  .grid.large-to-70 > .col {
+    padding: 35px;
+  }
+  .grid.large-to-70.outergut {
+    margin: 0;
+    padding: 35px;
+  }
+  .grid.large-to-100 {
+    margin: -50px;
+  }
+  .grid.large-to-100 > .col {
+    padding: 50px;
+  }
+  .grid.large-to-100.outergut {
+    margin: 0;
+    padding: 50px;
+  }
+  .grid .col.large-to-10 {
+    width: 10%;
+  }
+  .grid .col.large-to-16 {
+    width: 16.66667%;
+  }
+  .grid .col.large-to-20 {
+    width: 20%;
+  }
+  .grid .col.large-to-25 {
+    width: 25%;
+  }
+  .grid .col.large-to-30 {
+    width: 30%;
+  }
+  .grid .col.large-to-33 {
+    width: 33.33333%;
+  }
+  .grid .col.large-to-40 {
+    width: 40%;
+  }
+  .grid .col.large-to-45 {
+    width: 45%;
+  }
+  .grid .col.large-to-50 {
+    width: 50%;
+  }
+  .grid .col.large-to-55 {
+    width: 55%;
+  }
+  .grid .col.large-to-60 {
+    width: 60%;
+  }
+  .grid .col.large-to-66 {
+    width: 66.66667%;
+  }
+  .grid .col.large-to-70 {
+    width: 70%;
+  }
+  .grid .col.large-to-80 {
+    width: 80%;
+  }
+  .grid .col.large-to-100 {
+    width: 100%;
+  }
+}
+/* Laptops and desktops */
+@media all and (min-width: 1200px) {
+  /* Larger */
+  /**
+  * Adaptive Framework
+  */
+  /* Hiding */
+  .larger-hide {
+    display: none;
+  }
+
+  /* Showing */
+  .larger-show {
+    display: block;
+  }
+
+  /* Grid */
+  .grid.larger-to-5 {
+    margin: -2.5px;
+  }
+  .grid.larger-to-5 > .col {
+    padding: 2.5px;
+  }
+  .grid.larger-to-5.outergut {
+    margin: 0;
+    padding: 2.5px;
+  }
+  .grid.larger-to-10 {
+    margin: -5px;
+  }
+  .grid.larger-to-10 > .col {
+    padding: 5px;
+  }
+  .grid.larger-to-10.outergut {
+    margin: 0;
+    padding: 5px;
+  }
+  .grid.larger-to-15 {
+    margin: -7.5px;
+  }
+  .grid.larger-to-15 > .col {
+    padding: 7.5px;
+  }
+  .grid.larger-to-15.outergut {
+    margin: 0;
+    padding: 7.5px;
+  }
+  .grid.larger-to-20 {
+    margin: -10px;
+  }
+  .grid.larger-to-20 > .col {
+    padding: 10px;
+  }
+  .grid.larger-to-20.outergut {
+    margin: 0;
+    padding: 10px;
+  }
+  .grid.larger-to-30 {
+    margin: -15px;
+  }
+  .grid.larger-to-30 > .col {
+    padding: 15px;
+  }
+  .grid.larger-to-30.outergut {
+    margin: 0;
+    padding: 15px;
+  }
+  .grid.larger-to-40 {
+    margin: -20px;
+  }
+  .grid.larger-to-40 > .col {
+    padding: 20px;
+  }
+  .grid.larger-to-40.outergut {
+    margin: 0;
+    padding: 20px;
+  }
+  .grid.larger-to-50 {
+    margin: -25px;
+  }
+  .grid.larger-to-50 > .col {
+    padding: 25px;
+  }
+  .grid.larger-to-50.outergut {
+    margin: 0;
+    padding: 25px;
+  }
+  .grid.larger-to-60 {
+    margin: -30px;
+  }
+  .grid.larger-to-60 > .col {
+    padding: 30px;
+  }
+  .grid.larger-to-60.outergut {
+    margin: 0;
+    padding: 30px;
+  }
+  .grid.larger-to-70 {
+    margin: -35px;
+  }
+  .grid.larger-to-70 > .col {
+    padding: 35px;
+  }
+  .grid.larger-to-70.outergut {
+    margin: 0;
+    padding: 35px;
+  }
+  .grid.larger-to-100 {
+    margin: -50px;
+  }
+  .grid.larger-to-100 > .col {
+    padding: 50px;
+  }
+  .grid.larger-to-100.outergut {
+    margin: 0;
+    padding: 50px;
+  }
+  .grid .col.larger-to-10 {
+    width: 10%;
+  }
+  .grid .col.larger-to-16 {
+    width: 16.66667%;
+  }
+  .grid .col.larger-to-20 {
+    width: 20%;
+  }
+  .grid .col.larger-to-25 {
+    width: 25%;
+  }
+  .grid .col.larger-to-30 {
+    width: 30%;
+  }
+  .grid .col.larger-to-33 {
+    width: 33.33333%;
+  }
+  .grid .col.larger-to-40 {
+    width: 40%;
+  }
+  .grid .col.larger-to-45 {
+    width: 45%;
+  }
+  .grid .col.larger-to-50 {
+    width: 50%;
+  }
+  .grid .col.larger-to-55 {
+    width: 55%;
+  }
+  .grid .col.larger-to-60 {
+    width: 60%;
+  }
+  .grid .col.larger-to-66 {
+    width: 66.66667%;
+  }
+  .grid .col.larger-to-70 {
+    width: 70%;
+  }
+  .grid .col.larger-to-80 {
+    width: 80%;
+  }
+  .grid .col.larger-to-100 {
+    width: 100%;
+  }
+}
+/**
+ * Fallbacks for non-flexbox browsers
+ * Requirement: Modernizr with flexbox detection
+ * Note: .fill-width must be dealt with case-by-case. For example: 
+ * .no-flexbox .some-column.fill-width {
+ *     width: calc(100% - 100px); // Where 100px is the size of the remaining column
+ * }
+ */
+.no-flexbox .grid {
+  display: block;
+  overflow: auto;
+}
+.no-flexbox .grid .col {
+  float: left;
+}
+.no-flexbox .grid.position-center .col {
+  margin: 0 auto;
+  float: none;
+}
+.no-flexbox .grid.position-right .col {
+  float: right;
+}
+.no-flexbox .grid.position-middle {
+  display: block;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.no-flexbox .grid.position-middle .col {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}

@@ -24,6 +24,13 @@ $gutter-sizes: 5 10 15 20 30 40 50 60 70 100;
 
 $delimiter: "-";
 
+$smallest: "smallest";
+$smaller: "smaller";
+$small: "small";
+$medium: "medium";
+$large: "large";
+$larger: "larger";
+
 /* Screen sizes */
 
 $mobile-small-portrait-width: 480px;
@@ -37,6 +44,7 @@ $desktop-width: 1200px;
     
     /* The Grid */
     
+    -js-display: flex;
     display: flex;
     flex-wrap: wrap;
     -webkit-box-sizing: border-box;
@@ -44,9 +52,33 @@ $desktop-width: 1200px;
     box-sizing: border-box;
     -webkit-flex-wrap: wrap;
     display: -webkit-flex;
+
+    * {
+        box-sizing: border-box;
+    }
     
-    &.justify-center {
+    &.position-left {
+        justify-content: flex-start;
+    }
+    
+    &.position-center {
         justify-content: center;
+    }
+    
+    &.position-right {
+        justify-content: flex-end;
+    }
+
+    &.position-top {
+        align-items: flex-start;
+    }
+
+    &.position-middle {
+        align-items: center;
+    }
+
+    &.position-bottom {
+        align-items: flex-end;
     }
     
     /* Column Sizes */
@@ -112,27 +144,27 @@ $desktop-width: 1200px;
     */
 
     /* Hiding */
-    .smallest#{$delimiter}hide { display: none; }
+    .#{$smallest}#{$delimiter}hide { display: none; }
 
     /* Showing */
-    .smallest#{$delimiter}show { display: block; }
+    .#{$smallest}#{$delimiter}show { display: block; }
     
     /* Grid */
     .grid {
         @each $size in $gutter-sizes {
-            &.smallest#{$delimiter}to#{$delimiter}#{floor($size)} {
+            &.#{$smallest}#{$delimiter}to#{$delimiter}#{floor($size)} {
                 margin: #{"-"}#{$size/2}#{"px"};
             }
-            &.smallest#{$delimiter}to#{$delimiter}#{floor($size)} > .col {
+            &.#{$smallest}#{$delimiter}to#{$delimiter}#{floor($size)} > .col {
                 padding: #{$size/2}#{"px"};
             }
-            &.smallest#{$delimiter}to#{$delimiter}#{floor($size)}.outergut {
+            &.#{$smallest}#{$delimiter}to#{$delimiter}#{floor($size)}.outergut {
                 margin: 0; padding: #{$size/2}#{"px"};
             }
         }
         .col {
             @each $size in $column-sizes {
-                &.smallest#{$delimiter}to#{$delimiter}#{floor($size)} {
+                &.#{$smallest}#{$delimiter}to#{$delimiter}#{floor($size)} {
                     width: #{$size}#{"%"};
                 } 
             }
@@ -149,27 +181,27 @@ $desktop-width: 1200px;
     */
 
     /* Hiding */
-    .smaller#{$delimiter}hide { display: none; }
+    .#{$smaller}#{$delimiter}hide { display: none; }
 
     /* Showing */
-    .smaller#{$delimiter}show { display: block; }
+    .#{$smaller}#{$delimiter}show { display: block; }
 
     /* Grid */
     .grid {
         @each $size in $gutter-sizes {
-            &.smaller#{$delimiter}to#{$delimiter}#{floor($size)} {
+            &.#{$smaller}#{$delimiter}to#{$delimiter}#{floor($size)} {
                 margin: #{"-"}#{$size/2}#{"px"};
             }
-            &.smaller#{$delimiter}to#{$delimiter}#{floor($size)} > .col {
+            &.#{$smaller}#{$delimiter}to#{$delimiter}#{floor($size)} > .col {
                 padding: #{$size/2}#{"px"};
             }
-            &.smaller#{$delimiter}to#{$delimiter}#{floor($size)}.outergut {
+            &.#{$smaller}#{$delimiter}to#{$delimiter}#{floor($size)}.outergut {
                 margin: 0; padding: #{$size/2}#{"px"};
             }
         }
         .col {
             @each $size in $column-sizes {
-                &.smaller#{$delimiter}to#{$delimiter}#{floor($size)} {
+                &.#{$smaller}#{$delimiter}to#{$delimiter}#{floor($size)} {
                     width: #{$size}#{"%"};
                 } 
             }
@@ -186,27 +218,27 @@ $desktop-width: 1200px;
     */
 
     /* Hiding */
-    .small#{$delimiter}hide { display: none; }
+    .#{$small}#{$delimiter}hide { display: none; }
 
     /* Showing */
-    .small#{$delimiter}show { display: block; }
+    .#{$small}#{$delimiter}show { display: block; }
 
     /* Grid */
     .grid {
         @each $size in $gutter-sizes {
-            &.small#{$delimiter}to#{$delimiter}#{floor($size)} {
+            &.#{$small}#{$delimiter}to#{$delimiter}#{floor($size)} {
                 margin: #{"-"}#{$size/2}#{"px"};
             }
-            &.small#{$delimiter}to#{$delimiter}#{floor($size)} > .col {
+            &.#{$small}#{$delimiter}to#{$delimiter}#{floor($size)} > .col {
                 padding: #{$size/2}#{"px"};
             }
-            &.small#{$delimiter}to#{$delimiter}#{floor($size)}.outergut {
+            &.#{$small}#{$delimiter}to#{$delimiter}#{floor($size)}.outergut {
                 margin: 0; padding: #{$size/2}#{"px"};
             }
         }
         .col {
             @each $size in $column-sizes {
-                &.small#{$delimiter}to#{$delimiter}#{floor($size)} {
+                &.#{$small}#{$delimiter}to#{$delimiter}#{floor($size)} {
                     width: #{$size}#{"%"};
                 } 
             }
@@ -223,27 +255,27 @@ $desktop-width: 1200px;
     */
 
     /* Hiding */
-    .medium#{$delimiter}hide { display: none; }
+    .#{$medium}#{$delimiter}hide { display: none; }
 
     /* Showing */
-    .medium#{$delimiter}show { display: block; }
+    .#{$medium}#{$delimiter}show { display: block; }
     
     /* Grid */
     .grid {
         @each $size in $gutter-sizes {
-            &.medium#{$delimiter}to#{$delimiter}#{floor($size)} {
+            &.#{$medium}#{$delimiter}to#{$delimiter}#{floor($size)} {
                 margin: #{"-"}#{$size/2}#{"px"};
             }
-            &.medium#{$delimiter}to#{$delimiter}#{floor($size)} > .col {
+            &.#{$medium}#{$delimiter}to#{$delimiter}#{floor($size)} > .col {
                 padding: #{$size/2}#{"px"};
             }
-            &.medium#{$delimiter}to#{$delimiter}#{floor($size)}.outergut {
+            &.#{$medium}#{$delimiter}to#{$delimiter}#{floor($size)}.outergut {
                 margin: 0; padding: #{$size/2}#{"px"};
             }
         }
         .col {
             @each $size in $column-sizes {
-                &.medium#{$delimiter}to#{$delimiter}#{floor($size)} {
+                &.#{$medium}#{$delimiter}to#{$delimiter}#{floor($size)} {
                     width: #{$size}#{"%"};
                 } 
             }
@@ -260,27 +292,27 @@ $desktop-width: 1200px;
     */
 
     /* Hiding */
-    .large#{$delimiter}hide { display: none; }
+    .#{$large}#{$delimiter}hide { display: none; }
 
     /* Showing */
-    .large#{$delimiter}show { display: block; }
+    .#{$large}#{$delimiter}show { display: block; }
 
     /* Grid */
     .grid {
         @each $size in $gutter-sizes {
-            &.large#{$delimiter}to#{$delimiter}#{floor($size)} {
+            &.#{$large}#{$delimiter}to#{$delimiter}#{floor($size)} {
                 margin: #{"-"}#{$size/2}#{"px"};
             }
-            &.large#{$delimiter}to#{$delimiter}#{floor($size)} > .col {
+            &.#{$large}#{$delimiter}to#{$delimiter}#{floor($size)} > .col {
                 padding: #{$size/2}#{"px"};
             }
-            &.large#{$delimiter}to#{$delimiter}#{floor($size)}.outergut {
+            &.#{$large}#{$delimiter}to#{$delimiter}#{floor($size)}.outergut {
                 margin: 0; padding: #{$size/2}#{"px"};
             }
         }
         .col {
             @each $size in $column-sizes {
-                &.large#{$delimiter}to#{$delimiter}#{floor($size)} {
+                &.#{$large}#{$delimiter}to#{$delimiter}#{floor($size)} {
                     width: #{$size}#{"%"};
                 } 
             }
@@ -297,31 +329,69 @@ $desktop-width: 1200px;
     */
 
     /* Hiding */
-    .larger#{$delimiter}hide { display: none; }
+    .#{$larger}#{$delimiter}hide { display: none; }
 
     /* Showing */
-    .larger#{$delimiter}show { display: block; }
+    .#{$larger}#{$delimiter}show { display: block; }
 
     /* Grid */
     .grid {
         @each $size in $gutter-sizes {
-            &.larger#{$delimiter}to#{$delimiter}#{floor($size)} {
+            &.#{$larger}#{$delimiter}to#{$delimiter}#{floor($size)} {
                 margin: #{"-"}#{$size/2}#{"px"};
             }
-            &.larger#{$delimiter}to#{$delimiter}#{floor($size)} > .col {
+            &.#{$larger}#{$delimiter}to#{$delimiter}#{floor($size)} > .col {
                 padding: #{$size/2}#{"px"};
             }
-            &.larger#{$delimiter}to#{$delimiter}#{floor($size)}.outergut {
+            &.#{$larger}#{$delimiter}to#{$delimiter}#{floor($size)}.outergut {
                 margin: 0; padding: #{$size/2}#{"px"};
             }
         }
         .col {
             @each $size in $column-sizes {
-                &.larger#{$delimiter}to#{$delimiter}#{floor($size)} {
+                &.#{$larger}#{$delimiter}to#{$delimiter}#{floor($size)} {
                     width: #{$size}#{"%"};
                 } 
             }
         }
     }
     
+}
+
+/**
+ * Fallbacks for non-flexbox browsers
+ * Requirement: Modernizr with flexbox detection
+ * Note: .fill-width must be dealt with case-by-case. For example: 
+ * .no-flexbox .some-column.fill-width {
+ *     width: calc(100% - 100px); // Where 100px is the size of the remaining column
+ * }
+ */
+
+.no-flexbox {
+    .grid {
+        display: block;
+        overflow: auto;
+        .col {
+            float: left;
+        }
+        &.position-center .col {
+            margin: 0 auto;
+            float: none;
+        }
+        &.position-right .col {
+            float: right;
+        }
+        &.position-middle {
+            display: block;
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            .col {
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+            }
+        }
+    }
 }
