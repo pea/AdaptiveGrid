@@ -58,6 +58,9 @@ $desktop-width: 1200px;
     * {
         box-sizing: border-box;
     }
+
+
+    /* Positions */
     
     &.position-left {
         justify-content: flex-start;
@@ -92,7 +95,10 @@ $desktop-width: 1200px;
             } 
         }
         &.fill-width {
-            flex: 1
+            flex: 1;
+        }
+        &.auto-width {
+            flex: 0 0 auto;
         }
     }
     

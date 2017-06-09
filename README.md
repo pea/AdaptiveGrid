@@ -161,3 +161,35 @@ To position a column use the .position-**location** class. Available classes as 
 </div>
 
 ```
+
+Fill Width
+==========
+
+Fill the remaining space of a row with .fill-width.
+
+**Example:** 
+
+```html
+
+<div class="grid gut10">
+    <div class="col perc30"></div>
+    <div class="col fill-width"></div>
+</div>
+
+```
+
+Auto Width
+==========
+
+Contract the width to the size of the content.
+
+**Example:** 
+
+```html
+
+<div class="grid gut10">
+    <div class="col perc30"></div>
+    <div class="col auto-width"></div>
+</div>
+
+```
