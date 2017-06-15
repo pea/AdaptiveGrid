@@ -130,12 +130,12 @@ $desktop-width: 1200px;
  * Showing
  */
 
-.smallest#{$delimiter}show,
-.smaller#{$delimiter}show,
-.small#{$delimiter}show,
-.medium#{$delimiter}show,
-.large#{$delimiter}show,
-.larger#{$delimiter}show {
+.#{$smallest}#{$delimiter}show,
+.#{$smaller}#{$delimiter}show,
+.#{$small}#{$delimiter}show,
+.#{$medium}#{$delimiter}show,
+.#{$large}#{$delimiter}show,
+.#{$larger}#{$delimiter}show {
     display: none
 }
 
